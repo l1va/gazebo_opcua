@@ -11,6 +11,8 @@ Gazebo OPC UA integration
 Currently supports creating manipulator/positon/velocity objects and simple set/read of values over OPC UA. Server is notified when updating one of the values. 
 WIP: PubSub integration.
 
+[Imgur](https://imgur.com/LmIWEU5)
+
 ## Run
 ```gazebo iiwa14.world```
 
