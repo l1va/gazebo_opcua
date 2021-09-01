@@ -33,7 +33,7 @@ int OpcServerMain(std::vector<physics::JointPtr> joints)
         cout << "OPC SERVER INIT SUCCESS" << endl;
 
         // Create configuration file name
-        UaString sConfigFileName("/home/laggy/Desktop/minimal/cmake-build-debug");
+        UaString sConfigFileName("/home/l1va/pywork/gazebo_opcua/build");
 
 #if SUPPORT_XML_PARSER
         sConfigFileName += "/ServerConfig.xml";
@@ -42,7 +42,7 @@ int OpcServerMain(std::vector<physics::JointPtr> joints)
 #endif
         try {
             OpcServer *pServer = new OpcServer;
-            cout << pServer->setServerConfig(sConfigFileName, "/home/laggy/Desktop/minimal/cmake-build-debug") << endl;
+            cout << pServer->setServerConfig(sConfigFileName, "/home/l1va/pywork/gazebo_opcua/build") << endl;
             cout << sConfigFileName.toUtf8() << endl;
 
             intern::NodeManagerinternship *pNodeManager = new intern::NodeManagerinternship(false);
@@ -82,6 +82,8 @@ int OpcServerMain(std::vector<physics::JointPtr> joints)
                             UaNodeId(UaString("%1.Joints").arg(manipulator1->nodeId().toString()),
                                      pNodeManager->getNameSpaceIndex()), joint1,
                             OpcUaId_HasComponent);
+
+                           joint1->getPosition();
                 }
 
                 // Wait for user command to terminate the server thread.

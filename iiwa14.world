@@ -6,8 +6,8 @@
     <include>
       <uri>model://sun</uri>
     </include>
-
  <model name="iiwa14">
+    <plugin name="any_plugin_name" filename="libGazeboOPCUAd.so"/>
     <link name="base">
       <pose frame="">0 0 0 0 -0 0</pose>
       <inertial>

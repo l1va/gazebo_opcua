@@ -1,3 +1,7 @@
+.idea
+build/*
+!build/libGazeboOPCUAd.so
+!build/ServerConfig.xml
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -8,7 +12,6 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
 develop-eggs/
 dist/
 downloads/
