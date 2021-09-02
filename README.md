@@ -14,10 +14,10 @@ Was built for Ubuntu 18.04, Gazebo 9, OPC UA bundle v1.7.4. Might work with othe
 1. Download C++ based OPC UA Client/Server SDK from [HERE](https://www.unified-automation.com/downloads/opc-ua-development.html) (you need login at first)
 2. Extract and set `export UASDK_BASE_DIR=PATH_TO_DOWNLOADED_SDK/sdk/`
 3. Clean build directory except ServerConfig.xml file (or copy it later from sdk)
-4. cd build && cmake .. -DCMAKE_BUILD_TYPE=Debug && make
+4. cd build && cmake .. -DCMAKE_BUILD_TYPE=Debug && make && cd ..
 
 ## Run
-1. Go to the root of the project `cd gazebo_opcua` or `cd ..` after building
+1. Go to the root of the project
 2. To find the plugin: 
 `export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:./build`
 3. To find model files:
@@ -28,4 +28,10 @@ Or better (paused and verbose): `gazebo -u iiwa14.world --verbose`
 The simplest way to change value - download [UA Expert](https://www.unified-automation.com/downloads/opc-ua-clients.html)  
 Run gazebo at first and UaExpert will find connection automatically.
 
+Changes to values can be caught in the intern_nodemanagerinternship.cpp in the 
+method 'beforeSetAttributeValue'
 
+### Repeat
+To repeat the same from scratch you need to create a tree of types in 
+the [UaModeler](https://www.unified-automation.com/downloads/opc-ua-development) and generate
+code for objects
