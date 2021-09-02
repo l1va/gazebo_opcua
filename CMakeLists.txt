@@ -21,7 +21,7 @@ add_library(GazeboOPCUA SHARED src/objects/intern_instancefactory_internship.cpp
 src/objects/intern_jointtypebase.cpp src/objects/intern_manipulatortype.cpp src/objects/intern_positiontype.cpp
 src/objects/intern_positiontypebase.cpp src/objects/intern_nodemanagerinternship.cpp
 src/objects/intern_nodemanagerinternshipbase.cpp src/objects/intern_manipulatortypebase.cpp
-src/joint_state_publisher.h src/main.cpp ${sdk_home}examples/utilities/shutdown.cpp
+ src/main.cpp ${sdk_home}examples/utilities/shutdown.cpp
 ${sdk_home}examples/utilities/opcserver.cpp)
 
 include_directories(${GAZEBO_INCLUDE_DIRS})
