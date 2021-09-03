@@ -13,7 +13,6 @@
 #include <gazebo/gazebo.hh>
 #include <gazebo/physics/physics.hh>
 #include <gazebo/common/common.hh>
-#include <nats/nats.h>
 
 using namespace gazebo;
 using namespace std;
