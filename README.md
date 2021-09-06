@@ -10,11 +10,10 @@ Was built for Ubuntu 18.04, Gazebo 9, OPC UA bundle v1.7.4. Might work with othe
 ![Snippet](images/example.png)
 
 
-## Build
+## Preparation
 1. Download C++ based OPC UA Client/Server SDK from [HERE](https://www.unified-automation.com/downloads/opc-ua-development.html) (you need login at first)
-2. Extract and set `export UASDK_BASE_DIR=PATH_TO_DOWNLOADED_SDK/sdk/`
-3. Clean build directory except ServerConfig.xml file (or copy it later from sdk)
-4. cd build && cmake .. -DCMAKE_BUILD_TYPE=Debug && make && cd ..
+2. Extract and set `export UASDK_BASE_DIR=PATH_TO_DOWNLOADED_SDK/sdk/`, 
+better to add it in bashrc file
 
 ## Run
 1. Go to the root of the project
@@ -30,6 +29,10 @@ Run gazebo at first and UaExpert will find connection automatically.
 
 Changes to values can be caught in the intern_nodemanagerinternship.cpp in the 
 method 'beforeSetAttributeValue'
+
+## Build
+Build with debug flag because of license
+`cd build && cmake .. -DCMAKE_BUILD_TYPE=Debug && make && cd ..`
 
 ### Repeat
 To repeat the same from scratch you need to create a tree of types in 
